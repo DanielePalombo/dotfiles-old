@@ -1,0 +1,14 @@
+# ~/.tmuxinator/genmon.yml
+# you can make as many tabs as you wish...
+
+project_name: Tecnoquadro
+project_root: ~/public_html/tecnoquadro
+#pre_window: rvm --default use ruby-2.1.1@tecnoquadro
+tabs:
+  - editor: vim Gemfile
+  - server: 
+      layout: main-vertical
+      panes:
+        - server: rails s
+  - console: rails c
+  - host: 
