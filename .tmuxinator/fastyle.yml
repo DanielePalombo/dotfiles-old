@@ -1,0 +1,14 @@
+# ~/.tmuxinator/caplar.yml
+# you can make as many tabs as you wish...
+
+project_name: Fastyle
+project_root: ~/public_html/caplar
+windows:
+  - editor: vim Gemfile
+  - server: 
+      layout: main-vertical
+      panes:
+        - server: rails s -b 0
+        - webapp: cd frontend/ && grunt server ; cd - 
+  - console: rails c
+  - host: 
