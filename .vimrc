@@ -103,6 +103,12 @@ set incsearch                     " incremental searching
 set ignorecase                    " searches are case insensitive...
 set smartcase 
 
+" Backups and swap files
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup
+set noswapfile 
 
 " TEST VROOM
 let g:vroom_spec_command = "bundle exec rspec "
