@@ -1,6 +1,7 @@
 " COMPILED WITH ./configure --with-features=huge --enable-cscope --enable-gui=auto --enable-rubyinterp
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set shell=/bin/sh
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -30,7 +31,9 @@ Plugin 'othree/html5.vim'
 
 " INTEGRATION CONSOLE FILESYSTEM
 Plugin 'scrooloose/nerdtree' 
-Plugin 'kien/ctrlp.vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin' 
+
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Miscellanea
 Plugin 'tpope/vim-bundler'
@@ -161,6 +164,7 @@ set updatetime=1000
 map <C-n> :set relativenumber!<cr>
 
 " CTRLP
-map <C-b> :CtrlPBuffer<cr>
+let g:ctrlp_cmd = 'CtrlPBuffer'
+map <C-m> :CtrlPBuffer<cr>
 "map <C-m> :CtrlPMRUFiles<cr> 
 "
