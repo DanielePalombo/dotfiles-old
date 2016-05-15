@@ -164,7 +164,7 @@ set updatetime=1000
 map <C-n> :set relativenumber!<cr>
 
 " CTRLP
-let g:ctrlp_cmd = 'CtrlPBuffer'
-map <C-m> :CtrlPBuffer<cr>
-"map <C-m> :CtrlPMRUFiles<cr> 
-"
+"let g:ctrlp_cmd = 'CtrlPBuffer'
+"let g:ctrlp_cmd = 'CtrlPBuffer'
+map <C-b> :CtrlPBuffer<cr>
+map <C-m> :CtrlPMRUFiles<cr> 
