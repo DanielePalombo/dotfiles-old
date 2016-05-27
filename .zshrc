@@ -80,9 +80,19 @@ alias touch_en='xinput set-prop $TOUCH_ID "Device Enabled" 1'
 alias bundle='nocorrect bundle'
 alias sp="tmuxinator start" 
 
+alias tmux='TERM=screen-256color-bce tmux'
+alias tmuxinator='TERM=screen-256color-bce tmuxinator'
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/android-sdk-linux/platform-tools/" # Add Android platform tools bin
 export PATH="$PATH:$HOME/android-sdk-linux/tools/" # Add Android platform tools bin
-export JAVA_HOME=/usr/lib/jvm/java-7-oracle/jre/
 
-cd .
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/
+
+export ANDROID_HOME="$HOME/android-sdk-linux/" # Add Android platform tools bin
+
+rvm default
+
+export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+#cd .
