@@ -91,6 +91,8 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/
 
 export ANDROID_HOME="$HOME/android-sdk-linux/" # Add Android platform tools bin
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
 rvm default
 
 export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
