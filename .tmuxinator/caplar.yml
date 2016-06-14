@@ -12,7 +12,7 @@ windows:
       layout: main-vertical
       panes:
         - rails s -b 0
-        - cd frontend/ ; and grunt server ; cd - 
+        - cd frontend/ && grunt server ; cd - 
   - console: 
       panes:
         - rails c
