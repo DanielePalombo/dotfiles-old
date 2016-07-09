@@ -1,4 +1,4 @@
-" COMPILED WITH ./configure --with-features=huge --enable-cscope --enable-gui=auto --enable-rubyinterp
+" COMPILED WITH ./configure --with-features=huge --enable-cscope --enable-gui=auto --enable-rubyinterp --enable-pythoninterp
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set shell=/bin/sh
