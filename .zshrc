@@ -55,7 +55,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -73,29 +72,39 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Shell command
 TOUCH_ID=`xinput | grep Touchpad | awk '{ print $6 }'| awk -F= '{ print $2}'`
 alias touch_dis='xinput set-prop $TOUCH_ID "Device Enabled" 0'
 alias touch_en='xinput set-prop $TOUCH_ID "Device Enabled" 1'
 
-alias bundle='nocorrect bundle'
-alias sp="tmuxinator start" 
 
+# Tmux
+alias sp="tmuxinator start" 
 alias tmux='TERM=screen-256color-bce tmux'
 alias tmuxinator='TERM=screen-256color-bce tmuxinator'
+alias mux "tmuxinator"
 
 alias sudo='sudo env PATH=$PATH'
 
+# Ruby aliases
+alias bundle='nocorrect bundle'
+alias be="bundle exec"
+alias bi="bundle install"
+alias bo="bundle open"
+
+# Console aliases
+alias git="hub"
+alias g="hub"
+alias gd="g diff"
+alias gs="g status"
+
+# Android configuration
 export PATH="$PATH:$HOME/android-sdk-linux/platform-tools/" # Add Android platform tools bin
 export PATH="$PATH:$HOME/android-sdk-linux/tools/" # Add Android platform tools bin
-
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/
-
 export ANDROID_HOME="$HOME/android-sdk-linux/" # Add Android platform tools bin
 
 
 export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
-
-#cd .
 export PATH="$HOME/.rbenv/bin:$PATH"
-
 eval "$(rbenv init -)"
