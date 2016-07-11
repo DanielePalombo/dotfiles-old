@@ -40,8 +40,10 @@ Plugin 'tpope/vim-bundler'
 Plugin 'benmills/vimux'
 Plugin 'airblade/vim-gitgutter'
 
-" TEST
+" Dev Tools
 Plugin 'skalnik/vim-vroom'
+Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
