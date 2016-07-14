@@ -44,6 +44,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'skalnik/vim-vroom'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -164,6 +165,16 @@ autocmd FileType javascript map <leader>r :call RunProtractor()<cr>
 set updatetime=1000
 
 map <C-n> :set relativenumber!<cr>
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " CTRLP
 "let g:ctrlp_cmd = 'CtrlPBuffer'
