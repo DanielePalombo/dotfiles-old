@@ -1,8 +1,8 @@
 # ~/.tmuxinator/floyd.yml
 # you can make as many tabs as you wish...
 
-project_name: WeBuyHouses
-project_root: ~/public_html/webuyhouses
+project_name: Solidus
+project_root: ~/public_html/solidus
 #pre_window: rvm use ruby-2.2.0
 windows:
   - editor: 
@@ -14,4 +14,4 @@ windows:
         - be rails s
   - console: 
       panes:
-        - rails c
+        - be rails c

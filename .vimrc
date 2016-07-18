@@ -75,8 +75,19 @@ set textwidth=0
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn=join(range(81,999),",")
 
+" Mouse
+" set ttyfast
+" let g:NERDTreeMouseMode=3 
+
+" Enable mouse use in all modes
+" set mouse=a
+
+" Set this to the name of your terminal that supports mouse codes.
+" Must be one of: xterm, xterm2, netterm, dec, jsbterm, pterm
+"set ttymouse=xterm2
+
 " ENABLE SCROLL AFTER reach border
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins       
+set scrolloff=5         "Start scrolling when we're 8 lines away from margins       
 set sidescrolloff=15                                                                
 set sidescroll=1
 set cursorline!
@@ -108,6 +119,7 @@ set hlsearch                      " highlight matches
 set incsearch                     " incremental searching
 set ignorecase                    " searches are case insensitive...
 set smartcase 
+nmap <silent> ,/ :nohlsearch<CR>
 
 " Backups and swap files
 set backupdir=~/.vim/backup
@@ -123,6 +135,9 @@ let g:vroom_use_vimux = 1
 let g:vroom_test_unit_command = "test"
 let g:VimuxOrientation = "h"
 let g:vroom_cucumber_path = '`([ -e .zeus.sock ] && echo zeus) || echo bundle exec` cucumber -r features '
+
+map <leader>R :VroomRunTestFile<cr>
+map <leader>r :VroomRunNearestTest<cr>
 
 " SHORTCUT
 noremap  <Up> ""
@@ -149,8 +164,11 @@ map <leader>p "*p
 nmap <leader>v :tabedit $MYVIMRC<CR>
 nmap <leader>vr :source $MYVIMRC<CR>
 
-map <leader>R :VroomRunTestFile<cr>
-map <leader>r :VroomRunNearestTest<cr>
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " Protractor map keys
 function RunProtractor()
@@ -181,3 +199,4 @@ let g:syntastic_check_on_wq = 0
 "let g:ctrlp_cmd = 'CtrlPBuffer'
 map <C-b> :CtrlPBuffer<cr>
 map <C-m> :CtrlPMRUFiles<cr> 
+
