@@ -1,0 +1,5 @@
+--smart-case
+--ignore-dir=log/
+--ignore-dir=tmp/
+--ignore-dir=coverage/
+--ignore-file=ext:log
