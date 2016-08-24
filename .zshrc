@@ -84,7 +84,7 @@ alias sp="tmuxinator start"
 alias tmux='TERM=screen-256color-bce tmux'
 alias tmuxinator='TERM=screen-256color-bce tmuxinator'
 
-alias sudo='sudo env PATH=$PATH'
+alias sudo='sudo env "PATH=$PATH"'
 
 # Ruby aliases
 alias bundle='nocorrect bundle'
