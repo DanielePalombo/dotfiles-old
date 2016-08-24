@@ -28,6 +28,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'groenewege/vim-less'
 Plugin 'othree/html5.vim'
+Plugin 'bronson/vim-trailing-whitespace'
 
 " INTEGRATION CONSOLE FILESYSTEM
 Plugin 'scrooloose/nerdtree' 
@@ -45,6 +46,8 @@ Plugin 'skalnik/vim-vroom'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
+Plugin 'tyru/open-browser.vim'
+Plugin 'tyru/open-browser-github.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
