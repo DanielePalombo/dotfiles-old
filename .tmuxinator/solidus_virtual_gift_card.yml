@@ -1,8 +1,8 @@
 # ~/.tmuxinator/floyd.yml
 # you can make as many tabs as you wish...
 
-project_name: Solidus
-project_root: ~/public_html/solidus
+project_name: Solidus Virtual Gift Card
+project_root: ~/public_html/solidus_virtual_gift_card
 #pre_window: rvm use ruby-2.2.0
 windows:
   - editor:
@@ -11,7 +11,7 @@ windows:
   - server:
       layout: main-vertical
       panes:
-        - cd sandbox && be rails s
+        - be rails s
   - console:
       panes:
-        - cd sandbox && be rails c
+        - be rails c
