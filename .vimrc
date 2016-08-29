@@ -28,6 +28,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'groenewege/vim-less'
 Plugin 'othree/html5.vim'
+Plugin 'isRuslan/vim-es6'
 Plugin 'bronson/vim-trailing-whitespace'
 
 " INTEGRATION CONSOLE FILESYSTEM
