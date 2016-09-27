@@ -29,13 +29,17 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'groenewege/vim-less'
 Plugin 'othree/html5.vim'
 Plugin 'isRuslan/vim-es6'
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
+
+
+" SEARCH
+Plugin 'dyng/ctrlsf.vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " INTEGRATION CONSOLE FILESYSTEM
 Plugin 'scrooloose/nerdtree' 
 Plugin 'Xuyuanp/nerdtree-git-plugin' 
-
-Plugin 'ctrlpvim/ctrlp.vim'
 
 " Miscellanea
 Plugin 'tpope/vim-bundler'
@@ -71,13 +75,13 @@ python del powerline_setup
 
 
 " DRAW COLUMN AT 80 character column and set no wrap
-set fo+=o                      
-set fo-=r                     
+set fo+=o
+set fo-=r
 set fo-=t                      " Do no auto-wrap text using textwidth (does not apply to comments)
 set nowrap
 set textwidth=0
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
-let &colorcolumn=join(range(81,999),",")
+let &colorcolumn=join(range(81,85),",")
 
 " Mouse
 " set ttyfast
@@ -184,7 +188,7 @@ function RunProtractor()
 endfunction
 autocmd FileType javascript map <leader>r :call RunProtractor()<cr>
 
-set updatetime=1000
+" set updatetime=1000
 
 map <C-n> :set relativenumber!<cr>
 
@@ -204,3 +208,30 @@ let g:syntastic_check_on_wq = 0
 map <C-b> :CtrlPBuffer<cr>
 map <C-m> :CtrlPMRUFiles<cr> 
 
+" Default highlighting (see help :highlight and help :highlight-link)
+"highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
+highlight multiple_cursors_cursor ctermfg=7 ctermbg=242 guifg=LightGrey guibg=DarkGrey
+"highlight link multiple_cursors_visual Visual
+highlight link multiple_cursors_visual IncSearch
+
+" ctrlsf
+" let g:ctrlsf_position = 'bottom'
+let g:ctrlsf_mapping = {
+    \ "next": "n",
+    \ "prev": "N",
+    \ }
+
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+nmap     <C-F>l <Plug>CtrlSFQuickfixPrompt
+vmap     <C-F>l <Plug>CtrlSFQuickfixVwordPath
+vmap     <C-F>L <Plug>CtrlSFQuickfixVwordExec
+
+set listchars=tab:▸\ ,
+set list
