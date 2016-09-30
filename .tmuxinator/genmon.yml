@@ -1,14 +1,11 @@
-# ~/.tmuxinator/genmon.yml
-# you can make as many tabs as you wish...
-
 project_name: GenMon
 project_root: ~/public_html/genmon
 tabs:
   - editor: vim Gemfile
-  - server: 
+  - server:
       layout: main-vertical
       panes:
         - server: rails s
   - console: rails c
   - logs: tail -f log/development.log
-  - host: 
+  - host:

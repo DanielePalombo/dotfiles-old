@@ -1,5 +1,5 @@
-project_name: Solidus
-project_root: ~/public_html/solidus
+project_name: Solidus Related Products
+project_root: ~/public_html/solidus_related_products
 windows:
   - editor:
       panes:
@@ -7,7 +7,7 @@ windows:
   - server:
       layout: main-vertical
       panes:
-        - cd sandbox && be rails s
+        - be rails s
   - console:
       panes:
-        - cd sandbox && be rails c
+        - be rails c

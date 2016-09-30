@@ -1,9 +1,5 @@
-# ~/.tmuxinator/floyd.yml
-# you can make as many tabs as you wish...
-
 project_name: Officine Saffi
 project_root: ~/public_html/officine_saffi
-#pre_window: rvm use ruby-2.2.0
 windows:
   - editor:
       panes:

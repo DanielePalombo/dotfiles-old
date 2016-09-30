@@ -1,12 +1,9 @@
-# ~/.tmuxinator/caplar.yml
-# you can make as many tabs as you wish...
-
-project_name: uisp
+project_name: UISP
 project_root: ~/public_html/uisp
 tabs:
-  - editor: 
+  - editor:
       layout: main-vertical
-      panes: 
+      panes:
         - server: vim www/index.html
-        - ionic_build: adb devices && echo 'ionic run android' 
+        - ionic_build: adb devices && echo 'ionic run android'
   - serve: ionic serve

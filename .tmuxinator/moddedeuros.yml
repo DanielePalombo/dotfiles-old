@@ -1,5 +1,5 @@
-project_name: Solidus
-project_root: ~/public_html/solidus
+project_name: ModdedEuros
+project_root: ~/public_html/moddedeuros
 windows:
   - editor:
       panes:
@@ -7,7 +7,7 @@ windows:
   - server:
       layout: main-vertical
       panes:
-        - cd sandbox && be rails s
+        - be invoker start invoker.ini
   - console:
       panes:
-        - cd sandbox && be rails c
+        - be rails c

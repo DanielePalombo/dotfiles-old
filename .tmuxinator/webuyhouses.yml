@@ -1,17 +1,13 @@
-# ~/.tmuxinator/floyd.yml
-# you can make as many tabs as you wish...
-
 project_name: WeBuyHouses
 project_root: ~/public_html/webuyhouses
-#pre_window: rvm use ruby-2.2.0
 windows:
-  - editor: 
+  - editor:
       panes:
         - vim Gemfile
-  - server: 
+  - server:
       layout: main-vertical
       panes:
         - be rails s
-  - console: 
+  - console:
       panes:
         - rails c
