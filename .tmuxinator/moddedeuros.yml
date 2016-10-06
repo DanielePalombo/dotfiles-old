@@ -7,7 +7,7 @@ windows:
   - server:
       layout: main-vertical
       panes:
-        - be invoker start invoker.ini
+        - be rails s
   - console:
       panes:
         - be rails c
