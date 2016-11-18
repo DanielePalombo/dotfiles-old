@@ -25,6 +25,10 @@
   la = !git lg --all
   ll = log --stat --abbrev-commit
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+[push]
+  default = current
+[pull]
+  rebase = true
 [github]
   user = DanielePalombo
 [hub]

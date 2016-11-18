@@ -1,0 +1,13 @@
+project_name: FarmaVillage
+project_root: ~/public_html/farmavillage
+windows:
+  - editor:
+      panes:
+        - vim
+  - server:
+      layout: main-vertical
+      panes:
+        - be rails s
+  - console:
+      panes:
+        - be rails c

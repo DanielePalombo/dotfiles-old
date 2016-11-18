@@ -178,6 +178,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
 " Protractor map keys
 function RunProtractor()
  if match(expand("%"), '_spec\.js$') != -1
@@ -233,5 +236,9 @@ nmap     <C-F>l <Plug>CtrlSFQuickfixPrompt
 vmap     <C-F>l <Plug>CtrlSFQuickfixVwordPath
 vmap     <C-F>L <Plug>CtrlSFQuickfixVwordExec
 
-set listchars=tab:▸\ ,
+"set listchars=tab:▸\ ,
+" Display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
+" Use one space, not two, after punctuation.
+set nojoinspaces
 set list
